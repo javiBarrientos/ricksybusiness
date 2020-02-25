@@ -17,7 +17,7 @@ public class UfosPark {
 
     /*
     * Comprobar si tiene pasta
-    * Para bucle en cuanto ya tenga uno
+    * Parar bucle en cuanto ya tenga uno
     * bug añade la cc por cada null
      */
 
@@ -44,6 +44,6 @@ public class UfosPark {
 
     @Override
     public String toString() {
-        return flota.entrySet().toString();
+        return flota.keySet().toString();
     }
 }
