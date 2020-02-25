@@ -9,9 +9,17 @@ public class CrystalExpender {
         this.itemCost = itemCost;
     }
 
+    /*
+    * Comprobar stock
+    * Comprobar dinero
+     */
     void dispatch(CreditCard creditCard) {
-        creditCard.pay(itemCost);
-        this.stock -= 1;
+        if (stock() > 0) {
+            if (creditCard.credit() >= itemCost) {
+                creditCard.pay(itemCost);
+                this.stock -= 1;
+            }
+        }
     }
 
     int stock() {

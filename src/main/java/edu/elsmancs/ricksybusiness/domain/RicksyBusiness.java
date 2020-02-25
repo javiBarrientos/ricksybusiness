@@ -1,4 +1,4 @@
-/**
+/*
  * Ricksy Business
  * ===============
  * Rick se queda a cargo Morty y Summer,
@@ -30,7 +30,7 @@ public class RicksyBusiness {
     public static void main(String[] args) {
         System.out.println();
 
-        /**
+        /*
          * Crea una tarjeta de crédito para Abradolph.
          * Como es una AndromedanExpress
          * el crédito inicial es de 3000 EZIS
@@ -42,7 +42,7 @@ public class RicksyBusiness {
                 "===================="        );
         System.out.println(abradolph);
 
-        /**
+        /*
          * Construye el componente de reserva de Ovnis.
          * Recibe el objeto tarjeta de crédito del invitado/a
          * en el método dispatch(card)
@@ -114,7 +114,7 @@ public class RicksyBusiness {
                 "==============");
         ufosPark.add("trex");
         System.out.println(ufosPark);
-        /**
+        /*
          * Construye el dispensador de packs de bienvenida.
          * Indica el numero de unidades y el coste de cada
          * uno de ellos, que es de 50 EZIs
@@ -141,7 +141,7 @@ public class RicksyBusiness {
         packExpender.dispatch(gearHead);
         System.out.println("Packs\n" + packExpender);
         System.out.println("Credito de GearHead: " + gearHead.credit());
-        /**
+        /*
          * Vamos a automatizar ahora ambas tareas, de modo que
          * cuando llega un invitado/a se le asiga un ovni
          * y un pack y se realiza el cargo a la tarjeta.
@@ -181,7 +181,7 @@ public class RicksyBusiness {
         morty = new CreditCard("Morty", "0000000000000000");
         receptivo.dispatch(morty);
         mostrarReserva(morty, packExpender, ufosPark);
-        /**
+        /*
          * A por el 10!!
          * Wubba lubba dub dub!!
          *
