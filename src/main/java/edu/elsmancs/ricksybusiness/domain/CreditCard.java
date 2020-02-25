@@ -24,7 +24,6 @@ public class CreditCard {
             this.credit -= pago;
             return true;
         } else {
-            System.out.println("No tienes pasta macho");
             return false;
         }
     }
