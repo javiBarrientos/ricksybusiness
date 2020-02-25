@@ -14,4 +14,12 @@ public class CreditCardTest {
         assertEquals(3000, creditCard.credit(), 0);
     }
 
+    @Test
+    public void testSinDinero() {
+        CreditCard creditCard = new CreditCard("Abradolph Lincler", "4916119711304546");
+        creditCard.pay(3000);
+
+        assertEquals(0, creditCard.credit(), 0);
+    }
+
 }
