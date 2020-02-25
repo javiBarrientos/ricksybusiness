@@ -75,7 +75,7 @@ public class RicksyBusiness {
         // Abradolph quiere reservar otro ovni.
         // El sistema detecta que ya tiene uno
         // e ignora la petición.
-/*
+
         System.out.println("\nAbradolph quiere otro ovni\n" +
                 "==========================");
         ufosPark.dispatch(abradolph);
@@ -119,7 +119,7 @@ public class RicksyBusiness {
          * Indica el numero de unidades y el coste de cada
          * uno de ellos, que es de 50 EZIs
          */
-/*
+
         CrystalExpender packExpender = new CrystalExpender(3, 50);
 
         // Muestra el total de packs y su precio unidad
@@ -134,7 +134,7 @@ public class RicksyBusiness {
                 "========================");
         System.out.println("Packs\n" + packExpender);
         System.out.println("Credito de Abradolph: " + abradolph.credit());
-/*
+
         // El pobre GerHead no tiene crédito para comprar su pack
         System.out.println("\nGearHead sin credito para su pack\n" +
                 "=================================");

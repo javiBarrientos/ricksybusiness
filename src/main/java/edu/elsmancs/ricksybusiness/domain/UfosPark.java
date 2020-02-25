@@ -26,6 +26,7 @@ public class UfosPark {
             if (ovni.getValue() == null) {
                 creditCard.pay(fee);
                 flota.put(ovni.getKey(), creditCard.number());
+                break;
             }
         }
     }
@@ -39,5 +40,10 @@ public class UfosPark {
             }
         }
         return ovniName;
+    }
+
+    @Override
+    public String toString() {
+        return flota.entrySet().toString();
     }
 }
