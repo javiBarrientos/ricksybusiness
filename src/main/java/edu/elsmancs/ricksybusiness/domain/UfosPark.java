@@ -16,16 +16,20 @@ public class UfosPark {
     }
 
     /*
+    * Recorrer cada ovni con null
     * Comprobar si tiene pasta
+    * Asignarle ovni
     * Parar bucle en cuanto ya tenga uno
-    * bug añade la cc por cada null
      */
 
     void dispatch(CreditCard creditCard) {
         for (Map.Entry<String, String> ovni : flota.entrySet()) {
             if (ovni.getValue() == null) {
-                creditCard.pay(fee);
+                if (creditCard.credit() >= fee) {
+                    creditCard.pay(fee);
+                }
                 flota.put(ovni.getKey(), creditCard.number());
+            } else {
                 break;
             }
         }
