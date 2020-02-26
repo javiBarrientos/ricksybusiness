@@ -11,6 +11,10 @@ public class UfosPark {
 
     }
 
+    Map getFlota() {
+        return this.flota = flota;
+    }
+
     void add(String ovni) {
         flota.put(ovni, null);
     }
@@ -24,10 +28,8 @@ public class UfosPark {
 
     void dispatch(CreditCard creditCard) {
         for (Map.Entry<String, String> ovni : flota.entrySet()) {
-            if (ovni.getValue() == null) {
-                if (creditCard.credit() >= fee) {
-                    creditCard.pay(fee);
-                }
+            if (ovni.getValue() == null && creditCard.credit() >= fee) {
+                creditCard.pay(fee);
                 flota.put(ovni.getKey(), creditCard.number());
             } else {
                 break;
