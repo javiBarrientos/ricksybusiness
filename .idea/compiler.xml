@@ -9,8 +9,5 @@
         <module name="ricksybusiness" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ricksybusiness" target="11" />
-    </bytecodeTargetLevel>
   </component>
 </project>

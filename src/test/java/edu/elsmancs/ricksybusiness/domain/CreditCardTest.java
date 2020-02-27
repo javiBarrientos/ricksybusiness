@@ -22,4 +22,11 @@ public class CreditCardTest {
         assertEquals(0, creditCard.credit(), 0);
     }
 
+    @Test
+    public void comprobarPasta() {
+        CreditCard creditCard = new CreditCard("Abradolph Lincler", "4916119711304546");
+        creditCard.pay(2000);
+
+        assertEquals(1000, creditCard.credit(), 0);
+    }
 }
