@@ -31,7 +31,6 @@ public class UfosPark {
             if (ovni.getValue() == null && creditCard.credit() >= fee) {
                 creditCard.pay(fee);
                 flota.put(ovni.getKey(), creditCard.number());
-            } else {
                 break;
             }
         }
