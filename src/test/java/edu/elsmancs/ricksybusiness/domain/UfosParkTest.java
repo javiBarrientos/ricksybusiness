@@ -18,12 +18,6 @@ public class UfosParkTest {
         ufosPark.add("unx");
         ufosPark.add("dox");
         System.out.println(ufosPark.getFlota());
-
-        ufosPark.dispatch(creditCard);
-        ufosPark.getUfoOf(creditCard.number());
-
-        assertEquals("dox", ufosPark.getUfoOf(creditCard.number()));
-        System.out.println(ufosPark.getUfoOf(creditCard.number()));
     }
 
     @Test
@@ -39,6 +33,7 @@ public class UfosParkTest {
 
         assertEquals("dox", ufosPark.getUfoOf(creditCard.number()));
         System.out.println(ufosPark.getUfoOf(creditCard.number()));
+        System.out.println(ufosPark.getFlota());
     }
 
     @Test
