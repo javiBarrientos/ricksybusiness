@@ -3,7 +3,7 @@ package edu.elsmancs.ricksybusiness.domain;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UfosPark {
+public class UfosPark implements GuestDispatcher{
     private double fee = 500;
     private Map<String, String> flota = new HashMap<String, String>();
 
@@ -26,7 +26,8 @@ public class UfosPark {
     * Parar bucle en cuanto ya tenga uno
      */
 
-    void dispatch(CreditCard creditCard) {
+    @Override
+    public void dispatch(CreditCard creditCard) {
         for (Map.Entry<String, String> ovni : flota.entrySet()) {
             if (ovni.getValue() == null && creditCard.credit() >= fee) {
                 creditCard.pay(fee);

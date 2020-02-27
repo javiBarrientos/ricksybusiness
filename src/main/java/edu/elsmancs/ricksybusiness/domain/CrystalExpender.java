@@ -1,6 +1,6 @@
 package edu.elsmancs.ricksybusiness.domain;
 
-public class CrystalExpender {
+public class CrystalExpender implements GuestDispatcher{
     private int stock = 0;
     private double itemCost = 0;
 
@@ -13,7 +13,8 @@ public class CrystalExpender {
     * Comprobar stock
     * Comprobar dinero
      */
-    void dispatch(CreditCard creditCard) {
+    @Override
+    public void dispatch(CreditCard creditCard) {
         if (stock() > 0) {
             if (creditCard.credit() >= itemCost) {
                 creditCard.pay(itemCost);
