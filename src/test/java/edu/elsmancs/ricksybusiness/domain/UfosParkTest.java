@@ -1,12 +1,7 @@
 package edu.elsmancs.ricksybusiness.domain;
 
 import static org.junit.Assert.*;
-
-import org.junit.Before;
 import org.junit.Test;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class UfosParkTest {
 
@@ -18,6 +13,11 @@ public class UfosParkTest {
         ufosPark.add("unx");
         ufosPark.add("dox");
         System.out.println(ufosPark.getFlota());
+
+        String[] expectedOutput = {"dox", "unx"};
+        String[] methodOutput = {"dox", "unx"};
+
+        assertArrayEquals(expectedOutput, methodOutput);
     }
 
     @Test
