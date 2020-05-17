@@ -1,5 +1,9 @@
 package edu.elsmancs.ricksybusiness.domain;
 
+/**
+ * la clase de CrystalExpender se encarga de llevar el stock y el coste de del objeto.
+ */
+
 public class CrystalExpender implements GuestDispatcher{
     private int stock = 0;
     private double itemCost = 0;
