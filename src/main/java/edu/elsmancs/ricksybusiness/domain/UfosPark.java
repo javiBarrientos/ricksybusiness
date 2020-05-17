@@ -3,9 +3,20 @@ package edu.elsmancs.ricksybusiness.domain;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * La clase de UfosPark controla la flota de ovnis y el precio por cada uno ademas de los metodos getUfoOf y dispatch.
+ *
+ * Ademas esta clase implementa la interfaz GuestDispatcher.
+ */
+
 public class UfosPark implements GuestDispatcher{
     private double fee = 500;
     private Map<String, String> flota = new HashMap<String, String>();
+
+
+    /**
+     * Constructor vacio por defecto.
+     */
 
     UfosPark() {
 

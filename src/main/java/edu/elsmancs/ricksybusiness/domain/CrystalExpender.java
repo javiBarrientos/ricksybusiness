@@ -2,6 +2,8 @@ package edu.elsmancs.ricksybusiness.domain;
 
 /**
  * la clase de CrystalExpender se encarga de llevar el stock y el coste de del objeto.
+ *
+ * Ademas esta clase implementa la interfaz de GuestDsipatcher, usando el metodo de dispatch.
  */
 
 public class CrystalExpender implements GuestDispatcher{
