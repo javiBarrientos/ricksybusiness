@@ -19,21 +19,21 @@ public class UfosPark implements GuestDispatcher{
         flota.put(ovni, null);
     }
 
-    /*
-    * Recorrer cada ovni con null
-    * Comprobar si tiene pasta
-    * Asignarle ovni
-    * Parar bucle en cuanto ya tenga uno
-     */
-
     @Override
-    public void dispatch(CreditCard creditCard) {
-        for (Map.Entry<String, String> ovni : flota.entrySet()) {
-            if (ovni.getValue() == null && creditCard.credit() >= fee) {
-                creditCard.pay(fee);
-                flota.put(ovni.getKey(), creditCard.number());
-                break;
+    public void dispatch(CreditCard card) {
+
+        Map.Entry<String, String> ufo = null;
+
+        if (!flota.containsValue(card.number())) {
+            for (Map.Entry<String, String> entry : this.flota.entrySet()) {
+                if (entry.getValue() == null) {
+                    ufo = entry;
+                    break;
+                }
             }
+        }
+        if (ufo != null  && card.pay(fee)) {
+            this.flota.put(ufo.getKey(), card.number());
         }
     }
 
