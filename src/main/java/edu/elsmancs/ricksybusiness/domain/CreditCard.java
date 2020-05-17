@@ -1,5 +1,12 @@
 package edu.elsmancs.ricksybusiness.domain;
 
+/**
+ * La clase de CreditCard se usa para identificar al usuario, su tarjeta de credit y el dinero que tiene.
+ *
+ * Ademas esta clase se encarga de crear el metodo de pago, que comprueba si puedes hacer pagos devolviendo un
+ * boolean.
+ */
+
 public class CreditCard {
     private String owner = "";
     private String number = "";
